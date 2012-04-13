@@ -1,0 +1,236 @@
+form
+  ul
+    :list-style none
+    :padding 0
+  li
+    :position relative
+    :display inline-block
+    :padding-bottom 1.5em
+  input[type='submit'], select, input.input_btn
+    :cursor pointer
+
+\:not(.site_search)
+  label
+    :display inline-block
+    :vertical-align top
+    :min-width 110px
+    :margin .4em 1.3em 0 0
+    :font-weight bold
+    :white-space nowrap
+  input[type='text'], input[type='email'], input[type='password'], textarea, select
+    +model-border-box
+    :border 1px solid $lawgical-line-color
+    :-moz-box-shadow inset 0 3px 6px rgba(0,0,0,.15), 0 1px 0 #fff
+    :-webkit-box-shadow inset 0 3px 6px rgba(0,0,0,.15), 0 1px 0 #fff
+    :box-shadow inset 0 3px 6px rgba(0,0,0,.15), 0 1px 0 #fff
+    :outline none
+    :height 31px
+    :padding .5em .6em .6em .6em
+    &:focus
+      :border-color $lawgical-primary-accent-color
+      :-moz-box-shadow 0 0 5px 0 $btn-light
+      :-webkit-box-shadow 0 0 5px 0 $btn-light
+      :box-shadow 0 0 5px 0 $btn-light
+  input[type='submit']
+    //:padding .5em .6em .6em .6em
+    :vertical-align top
+  textarea
+    :height auto
+
+  .checkbox_section
+    label
+      :margin .2em 0 0 0
+      :min-width none
+      :font-weight normal
+
+// is main_body necessary here?
+#main_body
+  .results_filters
+    li
+      :border 1px solid #fff
+      :cursor default
+      :padding .2em .2em .2em .3em
+      &:hover
+        :border-color $lawgical-line-color
+        :background $lawgical-box-color
+    .icon_18
+      :margin-top -1px
+    label
+      :float left
+      :margin .2em 0 0 0
+      :width 134px
+      :cursor default
+      :font-weight normal
+    input[type='checkbox']
+      :cursor default
+
+.contact_page
+  input[type='text'], input[type='email'], input[type='password'], select
+    :width 250px
+  textarea
+    :width 325px
+
+#facebox,
+#lawgical_passport,
+.small_form
+  label
+    :min-width 85px
+  input[type='text'], input[type='email'], input[type='password'], textarea, select
+    :width 200px
+  textarea
+    :width 235px
+    :height 120px
+
+.left_col,
+.right_col,
+.small_type,
+.small_form
+  input, textarea, select
+    :font-size 10px
+  input[type='text'], input[type='email'], input[type='password'], select
+    :height 25px
+
+.required label:after
+  :content '*'
+
+
+div.required_marker
+  :position absolute
+  :top -7px
+  :right -68px
+  :background #ffc6c6
+  :-webkit-box-shadow 0 1px 5px #aaa
+  :-moz-box-shadow 0 1px 5px #aaa
+  :box-shadow 0 1px 5px #aaa
+  :border 1px solid #cb2f2f
+  :-webkit-border-radius 20px
+  :-moz-border-radius 20px
+  :border-radius 20px
+  :display table-cell
+  :height 17px
+  :padding 6px 13px 0 13px
+  :color #c21515
+  :font-weight bold
+  :font-size 10px
+  :line-height 100%
+  :text-decoration none
+  :text-shadow 0 1px 0px #fff
+  :white-space nowrap
+
+//////////////////////////
+//  sitewide search
+//////////////////////////
+.site_search
+  :background image-url('bg_hdr_search.png') no-repeat
+  :width 480px
+  :height 47px
+
+header.interior
+  .site_search
+    :margin-bottom 10px
+    :height 57px
+
+.site_search_stem
+  :background image-url('bg_hdr_search_stem.png') no-repeat
+  :margin-bottom 10px
+  :height 57px
+
+input.input_site_search
+  :background none
+  :border none
+  :outline none
+  :float left
+  :color #555
+  :font-family $lawgical-primary-accent-type
+  :font-size 13px
+  :margin 7px 28px 0 10px
+  :padding 9px 0 10px 31px
+  :width 319px
+
+.input_site_search_submit
+  :background image-url('#{$lawgical-site-path}bg_hdr_submit.gif') no-repeat
+  :border none
+  :outline none
+  :float left
+  :cursor pointer
+  :margin-top 8px
+  :padding 0
+  :width 84px
+  :height 31px
+  &:hover
+    :background-position 0 -31px
+  &:active
+    :background-position 0 -62px
+
+//////////////////////////
+//  autocomplete
+//////////////////////////
+input.input_site_search
+  :background image-url('icn_search_input.png') 7px 7px no-repeat
+  &.ui-autocomplete-loading
+    :background image-url('embed/input_loading.gif') 8px 8px no-repeat
+
+#home_search input.input_site_search
+  :background-position 7px 10px
+  :background-repeat no-repeat
+  &.ui-autocomplete-loading
+    :background-position 8px 11px
+    :background-repeat no-repeat
+
+.ui-autocomplete
+  :font-family $lawgical-body-type
+  :font-size 12px
+
+
+
+//////////////////////////
+// select dropdown
+//////////////////////////
+
+#profile_category-button
+  :background none
+  :border 1px solid $lawgical-line-color
+  //+border-radius-small
+  :-moz-box-shadow inset 0 3px 6px rgba(0,0,0,.15), 0 1px 0 #fff
+  :-webkit-box-shadow inset 0 3px 6px rgba(0,0,0,.15), 0 1px 0 #fff
+  :box-shadow inset 0 3px 6px rgba(0,0,0,.15), 0 1px 0 #fff
+
+.ui-selectmenu-status
+  :line-height 150%
+  :margin 0
+  :font-family $lawgical-body-type
+  :font-size 10px
+  :font-weight normal
+
+#profile_category-menu.ui-widget-content
+  :background none
+  :border none
+
+.ui-corner-bottom
+  :-moz-border-radius 0
+  :-webkit-border-radius 0
+  :border-radius 0
+
+.ui-selectmenu-menu
+  li
+    :width 185px
+    :background #666
+    :border-top 1px solid #666
+    :border-bottom 1px solid #555
+    :font-family $lawgical-body-type
+    :white-space nowrap
+    &:nth-child(4n+1)
+      :clear left
+    &:nth-child(odd)
+      :background #666
+      :border-top 1px solid #666
+      :border-bottom 1px solid #555
+    &:nth-child(even)
+      :background #777
+      :border-top 1px solid #777
+      :border-bottom 1px solid #666
+    a
+      :color #fff
+      &:hover
+        :background $lawgical-primary-accent-color
+        :color #fff

@@ -1,0 +1,189 @@
+.btn, .btn:visited,
+input[type='submit']
+  +model-border-box
+  :background $btn-dark
+  :-moz-box-shadow inset 0 1px 0 $btn-inner-shdw, 0 1px 0 0 #fff
+  :-webkit-box-shadow inset 0 1px 0 $btn-inner-shdw, 0 1px 0 0 #fff
+  :box-shadow inset 0 1px 0 $btn-inner-shdw, 0 1px 0 0 #fff
+  //0 1px 3px 2px rgba(0,0,0,.3)
+  :border 1px solid $btn-border
+  +border-radius-small
+  :color #fff
+  :display inline-block
+  :font-weight bold
+  :text-decoration none
+  :text-shadow 0 1px 0px $btn-text-shdw
+  :white-space nowrap
+
+  &:hover
+    :background $btn-light
+    :color #fff
+  &:active
+    :background $btn-dark
+    :-moz-box-shadow none
+    :-webkit-box-shadow none
+    :box-shadow none
+
+
+
+//////////////////////////
+//  small button add-on
+//////////////////////////
+
+.btn_small,
+.right_col input[type='submit'],
+#lawgical_passport input[type='submit'],
+#facebox input[type='submit'],
+.small_form input[type='submit'],
+.small_type input[type='submit']
+  :height 25px
+  :line-height 23px
+  :padding 0 12px
+  :font-size 10px
+
+.results_hdr a.btn_small
+  :height 27px
+  :line-height 25px
+
+  .btn_img_quote
+    :background-image image-url('btn_img_quote.png')
+    :float left
+    :margin -1px 6px 0 -1px
+    :width 15px
+    :height 15px
+
+
+
+//////////////////////////
+//  large button add-on
+//////////////////////////
+
+.btn_large, input[type='submit']
+  :height 31px
+  :line-height 29px
+  :padding 0 13px
+  :font-size 11px
+  .btn_img_video
+    :background image-url('btn_img_video.png')
+    :float left
+    :margin -1px 6px 0 0
+    :width 17px
+    :height 13px
+
+
+
+//////////////////////////
+//  red button add-on
+//////////////////////////
+
+.btn_red, .btn_red:visited
+  :background $red-dark
+  :filter progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$red-light}', EndColorStr='#{$red-dark}')
+  :background -moz-linear-gradient(top,  $red-light,  $red-dark)
+  :background -webkit-gradient(linear, left top, left bottom, from($red-light), to($red-dark))
+  :background linear-gradient($red-light, $red-dark)
+  :-moz-box-shadow inset 0 1px 0 $red-inner-shdw
+  :-webkit-box-shadow inset 0 1px 0 $red-inner-shdw
+  :box-shadow inset 0 1px 0 $red-inner-shdw
+  :border 1px solid $red-border
+  :text-shadow 0 1px 0px $red-text-shdw
+
+  &:hover
+    :background $red-light
+  &:active
+    :background $red-dark
+
+
+
+//////////////////////////
+//  special button add-on
+//////////////////////////
+
+.btn_special, .btn_special:visited,
+.btn_alt, .btn_alt:visited,
+#facebox input#user_submit
+  :background $special-dark
+  :-moz-box-shadow inset 0 1px 0 $special-inner-shdw, 0 1px 0 0 #fff
+  :-webkit-box-shadow inset 0 1px 0 $special-inner-shdw, 0 1px 0 0 #fff
+  :box-shadow inset 0 1px 0 $special-inner-shdw, 0 1px 0 0 #fff
+  :border 1px solid $special-border
+  :text-shadow 0 1px 0px $special-text-shdw
+
+  &:hover
+    :background $special-light
+  &:active
+    :background $special-dark
+
+
+
+//////////////////////////
+//  large input buttons
+//////////////////////////
+
+input[type='submit']
+  :padding-left 13px
+  :padding-right 13px
+  :font-size 11px
+
+
+
+//////////////////////////
+//  disabled buttons
+//////////////////////////
+
+.btn.btn_disabled, .btn.btn_disabled:visited, .btn.btn_disabled:hover
+  :border-color $lawgical-line-color
+  :background $lawgical-box-color
+  :-moz-box-shadow none
+  :-webkit-box-shadow none
+  :box-shadow none
+  :color #999
+  :text-shadow none
+  :cursor default
+
+
+
+//////////////////////////
+//  nav buttons
+//////////////////////////
+
+nav.buttons
+  :font-family $lawgical-primary-accent-type
+  :float right
+  a
+    :display inline-block
+    :position relative
+    :margin-left 10px
+    :border 1px solid #878787
+    +border-radius-small
+    :padding 0 11px
+    :height 26px
+    :background #b0b0b0
+    :font-size 12px
+    :color #fff
+    :text-decoration none
+    :line-height 26px
+    :text-shadow 0 1px 0 rgba(0,0,0,.35)
+    :-moz-box-shadow inset 0 1px 0 0 rgba(255,255,255,.4), 0 1px 0 0 #fff
+    :-webkit-box-shadow inset 0 1px 0 0 rgba(255,255,255,.4), 0 1px 0 0 #fff
+    :box-shadow inset 0 1px 0 0 rgba(255,255,255,.4), 0 1px 0 0 #fff
+    &:hover
+      :background #999
+      :color #fff
+    &.current
+      :border-color #bbb
+      :background #d7d7d7
+      :color #777
+      :text-shadow 0 1px 0 #fff
+    &.current
+      :cursor default
+      &:after
+        :position absolute
+        :top 100%
+        :left 50%
+        :margin -8px 0 0 -6px
+        :content image-url('bg_prd_nav_tail.png')
+  &.float_left
+    :float left
+    a
+      :margin 0 10px 0 0

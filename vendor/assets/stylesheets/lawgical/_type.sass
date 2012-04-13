@@ -1,0 +1,263 @@
+///////////////////////////
+//  global type
+//////////////////////////
+
+body, input, textarea, select
+  :font-family $lawgical-body-type
+  :font-size 12px
+  :color $lawgical-body-color
+
+a, a:visited
+  :color $lawgical-body-color
+  &:hover
+    :color $lawgical-primary-link-color
+
+a.result_co_name, a.result_co_name:visited
+  :color $lawgical-primary-accent-color
+  &:hover
+    :color $lawgical-body-color
+
+em, i
+  :font-style italic
+
+p, blockquote, .results_index h1
+  :margin-bottom 1.3em
+  :line-height 150%
+
+textarea
+  :line-height 150%
+
+h1, .large_heading
+  :color $lawgical-primary-accent-color
+  :font-family $lawgical-primary-accent-type
+  :font-size 30px
+  :font-weight normal
+  :letter-spacing -1px
+  :margin-bottom .7em
+
+h2, .h2_inline
+  :color $lawgical-primary-accent-color
+  :font-family $lawgical-primary-accent-type
+  :font-size 20px
+  :font-weight normal
+  :margin-bottom .6em
+  a, a:visited
+    :color $lawgical-primary-accent-color
+    &:hover
+      :color $lawgical-body-color
+
+h3, h5
+  :color $lawgical-primary-accent-color
+  :font-family $lawgical-primary-accent-type
+  :font-size 16px
+  :font-weight normal
+  :margin-bottom .6em
+  a, a:visited
+    :color $lawgical-primary-accent-color
+    :text-decoration none
+    &:hover
+      :color $lawgical-body-color
+
+h4
+  :font-size 11px
+  :font-weight bold
+  :margin-bottom .6em
+
+h5
+  :font-size 14px
+
+header
+  nav
+    :color #ccc
+
+code, pre
+  :font-family "Courier New", Courier, monospace
+
+figcaption
+  :font-style italic
+
+
+
+//////////////////////////
+//  home page
+//////////////////////////
+
+#home_page
+  h1
+    :width 621px
+    :padding-top 27px
+    :clear both
+    :color #888
+    :font-size 25px
+    :text-align right
+    +text-shadow-white
+    span
+      :color $lawgical-primary-accent-color
+
+#main_features
+  a:hover
+    :color #7b6d3b
+  h2
+    :border-bottom 1px dashed #a29a80
+    :padding-bottom 5px
+    :color #655c3d
+    :font-size 18px
+  h2 a, h2 a:visited
+    :color #655c3d
+    :text-decoration none
+    &:hover
+      :color #000
+
+  a.main_feat_link, a.main_feat_link:visited
+    :display block
+    :border-top 1px dashed #a29a80
+    :border-bottom 1px dashed #a29a80
+    :padding 3px 0 5px 0
+    :color #655c3d
+    :font-size 12px
+    :font-weight bold
+    :text-align right
+    :text-decoration none
+    &:hover
+      :color #000
+
+#callout_row
+  h2
+    :font-size 19px
+    :margin-bottom .2em
+    a
+      :text-decoration none
+  p
+    :margin-bottom 0
+
+#sub_features
+  h3
+    :text-align center
+    :margin-bottom 12px
+
+
+
+//////////////////////////
+//  locations, results, profiles
+//////////////////////////
+
+.location_list h3,
+.glossary h2
+  :background-color $lawgical-box-color
+  :color $lawgical-body-color
+  :padding .5em .9em
+
+.results_index
+  h1
+    :font-family $lawgical-body-type
+    :color #666
+    :letter-spacing 0
+  .left_col
+    :color #666
+    a, a:visited
+      :color #666
+
+.result_local, .result_statewide
+  .result_co_name
+    :font-size 12px
+    :font-weight bold
+    :vertical-align 5px
+
+.profile_show
+  h1
+    :font-size 25px
+    :margin-bottom 0
+
+  h2
+    :font-size 17px
+    :text-transform uppercase
+
+  h3
+    :font-size 14px
+    :text-transform uppercase
+
+.box_green
+  h2
+    :color #77c961
+    :margin -3px 0 0 0
+
+
+
+//////////////////////////
+//  blog
+//////////////////////////
+
+.help_center, .server_center
+  #cms_header
+    h1, h1 a, h1 a:visited
+      :color #655c3d
+      :text-decoration none
+      :margin-bottom 0
+    .small_type
+      :margin-top 18px
+
+
+
+//////////////////////////
+//  footer
+//////////////////////////
+
+#footer_content
+  a:hover
+    :color #7b6d3b
+  h5
+    :border-bottom 1px dashed #a29a80
+    :color #655c3d
+    :padding-bottom 5px
+    :margin-bottom .7em
+  h5 a, h5 a:visited
+    :color #655c3d
+    :text-decoration none
+    &:hover
+      :color $lawgical-body-color
+
+
+
+//////////////////////////
+//  misc
+//////////////////////////
+
+.justify, #main_features
+  :text-align justify
+
+.align_center
+  :text-align center
+
+.align_right
+  :text-align right
+
+.no_wrap
+  :white-space nowrap
+
+a.box_link, a.box_link:visited
+  :text-decoration none
+
+.box, .box_gray, .box_gradient, .results_hdr, .results_hdr h1, #main_features,
+#callout_row, #home_search h1, #cms_header, footer.interior, footer.extended #footer_content, .text_shadow_white
+  +text-shadow-white
+
+#home_page, #facebox, #facebox input, #facebox textarea, #facebox select,
+#lawgical_passport, #lawgical_passport input, #flash_message
+  :font-size 11px
+
+.large_heading
+  :font-size 33px
+  :margin-bottom .2em
+
+.large_type
+  :font-size 17px
+  :margin-bottom 1.7em
+
+.small_type, header, footer, .breadcrumb, .results_index, .results_index h1,
+.right_col, ul.letter_list
+  :font-family $lawgical-body-type
+  :font-size 10px
+  :letter-spacing 0
+
+.remove_underline
+  :text-decoration none

@@ -1,0 +1,419 @@
+body
+  :min-width 990px
+
+.fixed_width
+  +container
+  :overflow visible
+  //+showgrid
+
+// Forces scroll bar in FireFox
+html
+  :overflow-y scroll
+
+header
+  :display block
+  :padding 22px 0 28px 0
+  .fixed_width
+    +clearfix
+    :border-bottom 1px solid $lawgical-line-color
+
+  .targeted_break
+    :margin-bottom 23px
+    +clearfix
+
+.hdr_logo
+  :position relative
+  :width 170px
+  :height 54px
+  img
+    :position absolute
+    :left 0
+    :top 0
+
+#header_help
+  :margin-top 34px
+
+#sub_header
+  +clearfix
+  :margin -22px 0 16px 0
+
+
+
+//////////////////////////
+//  boxes and containers
+//////////////////////////
+
+.sb_container
+  :border-bottom 1px dashed $lawgical-line-color
+  :margin-bottom 13px
+  :padding-left 7px
+  :overflow hidden
+  ul.navigation
+    :margin-bottom 20px
+
+.box_gradient
+  :background $lawgical-box-color
+  :filter progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff', EndColorStr='#{$lawgical-box-gradient-end}')
+  :background -moz-linear-gradient(top,  #fff,  $lawgical-box-gradient-end)
+  :background -webkit-gradient(linear, left top, left bottom, from(#fff), to($lawgical-box-gradient-end))
+  :background linear-gradient(#fff, $lawgical-box-gradient-end)
+  :border 1px solid $lawgical-line-color
+  +border-radius-small
+  :-moz-box-shadow inset 0 0 0 1px #fff
+  :-webkit-box-shadow inset 0 0 0 1px #fff
+  :box-shadow inset 0 0 0 1px #fff
+  :overflow hidden
+  :padding 10px 13px 0 12px
+
+.left_col, .right_col
+  .box_gradient
+    :margin-bottom 15px
+
+// add this class to box_gradient
+.box_green
+  :border-color #afe8a0
+  :background #d9ffcf
+  :filter progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff', EndColorStr='#d9ffcf')
+  :background -webkit-gradient(linear, left top, left bottom, from(#fff), to(#d9ffcf))
+  :background -moz-linear-gradient(top,  #fff,  #d9ffcf)
+  :background linear-gradient(#fff, #d9ffcf)
+
+.box
+  :position relative
+  :border 1px solid $lawgical-line-color
+  +border-radius-small
+  :padding 18px 20px 20px 20px
+  :background #fff
+  :-moz-box-shadow 0 1px 0 0 #fff
+  :-webkit-box-shadow 0 1px 0 0 #fff
+  :box-shadow 0 1px 0 0 #fff
+  & :last-child
+    :margin-bottom 0
+  img[src*="logo"]
+    :position absolute
+    :top -30px
+    :right 16px
+    :border 5px solid #fff
+.sidebar
+  .box
+    :padding 10px
+    :line-height 150%
+
+.box_gray
+  :position relative
+  :background $lawgical-box-color
+  +inset-shadow-top-white
+  :border 1px solid $lawgical-line-color
+  +border-radius-small
+  :padding 18px 20px 20px 20px
+  :overflow hidden
+
+  hr
+    :border-bottom 1px solid $lawgical-line-color
+    :-moz-box-shadow 0 1px 0 0 #fff
+    :-webkit-box-shadow 0 1px 0 0 #fff
+    :box-shadow 0 1px 0 0 #fff
+
+  .box_gray_map
+    :background-color #bbb
+    :border-bottom 1px solid #fff
+    :padding 1px
+    :width 238px
+    :height 145px
+
+  .map_canvas
+    :background white
+    :width 238px
+    :height 145px
+
+.box_dashed
+  :border-style dashed
+
+.box_square
+  :-moz-border-radius 0
+  :-webkit-border-radius 0
+  :border-radius 0
+
+.right_col
+  .box_gray
+    :margin-bottom 15px
+    :padding 10px
+    :width 238px
+
+.box_special_hdr
+  :float left
+  :white-space nowrap
+  :margin-right 20px
+  :padding-top 3px
+  h2
+    :float left
+
+.box_special_copy
+  :float left
+  :max-width 470px
+
+
+
+//////////////////////////
+//  results page
+//////////////////////////
+
+.results_hdr
+  :background image_url('bg_results_hdr_stem.gif') no-repeat
+  :margin-bottom 5px
+  :height 49px
+
+  .float_left
+    :padding 13px 0 0 9px
+
+  a.btn
+    :margin 6px 6px 0 0
+
+.result_featured
+  +clearfix
+  :background-color #d6ebff
+  :overflow hidden
+  :margin-bottom 2px
+  :padding 7px 8px 10px 8px
+
+.result_local, .result_statewide
+  +clearfix
+  :border-bottom 1px solid $lawgical-line-color
+  :overflow hidden
+  :padding 7px 8px 10px 5px
+
+  &:first-child
+    :border-top 1px solid $lawgical-line-color
+
+  &.first_element
+    :background-color #ffffc7
+
+  .first_row
+    +clearfix
+    :padding-bottom 7px
+
+    .float_left
+      :width 313px
+
+.result_other
+  +clearfix
+  :border-bottom 1px solid $lawgical-line-color
+  :overflow hidden
+  :padding 7px 8px 10px 8px
+  &:first-child
+    :border-top 1px solid $lawgical-line-color
+
+.results_promise
+  :position relative
+  :margin-top 28px
+  & + .box_gradient
+    :padding-top 81px
+
+img[ src*="results_promise"]
+  :position absolute
+  :left 50%
+  :margin-left -42px
+  :top -15px
+
+
+
+//////////////////////////
+//  profile page
+//////////////////////////
+
+.profile_promise
+  :margin 0 -3px 12px 20px
+
+
+
+//////////////////////////
+//  footer
+//////////////////////////
+
+footer.interior
+  :display block
+  :margin-top 50px
+
+  #footer_content
+    :background #e8e8e8
+    :background -webkit-gradient(linear, left top, left bottom, from(#fff), to(#e8e8e8))
+    :background -moz-linear-gradient(top,  #fff,  #e8e8e8)
+    :background linear-gradient(#fff, #e8e8e8)
+    :border-top 1px solid $lawgical-line-color
+    :border-bottom 1px solid #bbb
+    :padding 15px 0 18px 0
+    :text-align center
+
+  #post_footer
+    :background-color #ddd
+    :overflow hidden
+    :border-top 1px solid #fff
+    :padding 12px 20px 20px 20px
+
+footer.extended
+  :display block
+  :margin-top 60px
+  :overflow hidden
+  ul.navigation
+    a
+      :border-bottom 1px solid #c3b89e
+      &:hover
+        :background rgba(0, 0, 0, .04)
+
+  #footer_content
+    :background-image image_url('shdw_lg_top.png')
+    :background-repeat no-repeat
+    :background-position top center
+    :background-color #e3dbcb
+    :border-top 1px solid #c3b89e
+    :border-bottom 1px solid #555
+    :color #afd8ff
+    :padding 30px 0 40px 0
+
+  #post_footer
+    :overflow hidden
+    :background-color #666
+    :border-top 1px solid #888
+    :color #fff
+    :padding 12px 0 15px 0
+    a
+      :color #ccc
+      &:hover
+        :color #fff
+
+
+
+//////////////////////////
+//  misc
+//////////////////////////
+
+.xs_break
+  :margin-bottom 5px
+  +clearfix
+
+.small_break
+  :margin-bottom 12px
+  +clearfix
+
+.medium_break
+  :margin-bottom 20px
+  +clearfix
+
+.large_break
+  :margin-bottom 30px
+  +clearfix
+
+.xl_break
+  :margin-bottom 60px
+  +clearfix
+
+.float_left
+  :float left
+  :margin-right 20px
+
+.float_right
+  :float right
+  :margin-left 20px
+
+.clear_both
+  +clearfix
+
+.clear
+  :clear both
+
+.overflow_hidden
+  :overflow hidden
+
+.content_break
+  +clearfix
+  :border-bottom 1px dashed $lawgical-line-color
+  :margin-bottom 1.6em
+  :padding-bottom .6em
+
+.line_below
+  :border-bottom 1px dashed $lawgical-line-color
+
+.indent
+  :padding-left 7px
+
+hr
+  :clear both
+  :border none
+  :border-bottom 1px dashed #c4c4c4
+  :height 2.2em
+  :margin 0 0 1.6em 0
+  :padding 0
+
+p + hr, ul + hr, ol + hr, table + hr
+  :height .6em
+
+a.profile_favorite, a.profile_recommend
+  :outline none
+
+.hide
+  :display none
+
+.inline
+  :display inline
+
+#flash_message
+  :color inherit
+  :text-shadow none
+
+#facebox .content.video
+  :width 512px
+  :height 345px
+  :display block
+
+span.alert
+  color: red
+
+code, pre
+  :border 1px solid $lawgical-line-color
+  +border-radius-small
+  :padding 2px 3px
+  :background $lawgical-box-color
+pre
+  :margin-bottom 1.5em
+  :padding 8px
+  :line-height 150%
+  :white-space pre-wrap
+
+figure
+  :float right
+  :margin 9px 0 9px 15px
+  img, iframe
+    :display block
+figcaption
+  :clear both
+  :margin 9px 0 9px
+  :line-height 150%
+  :text-align center
+
+.highlight
+  :padding 2px 0
+  :background yellow
+
+
+
+//////////////////////////
+//  keep these at the bottom
+//////////////////////////
+.remove_lr_margin
+  :margin-left 0
+  :margin-right 0
+
+.remove_tb_margin
+  :margin-top 0
+  :margin-bottom 0
+
+.remove_lr_padding
+  :padding-left 0
+  :padding-right 0
+
+.remove_tb_padding
+  :padding-top 0
+  :padding-bottom 0
+
+.remove_border
+  :border none

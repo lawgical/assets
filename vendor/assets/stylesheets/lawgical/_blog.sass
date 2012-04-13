@@ -1,0 +1,166 @@
+//////////////////////////
+//  blog
+//////////////////////////
+
+#cms_header
+  +clearfix
+  :background #e9e3d6
+  :background -webkit-gradient(linear, left top, left bottom, from(#fff), to(#e9e3d6))
+  :background -moz-linear-gradient(top,  #fff,  #e9e3d6)
+  :background linear-gradient(#fff, #e9e3d6)
+  :border-bottom 1px solid #f6f2ea
+  :padding 3px 15px 13px 15px
+
+#cms_sub_header
+  :background-color #ded7c7
+  :border-top 1px solid #c3b89e
+  :border-bottom 1px solid #cdc4ae
+  :margin-bottom 50px
+  :padding 6px 15px 10px 15px
+.article
+  +clearfix
+  :border-bottom 1px dashed #c4c4c4
+  :margin-bottom 30px
+  :padding-bottom 20px
+
+  a img
+    :float left
+    :border 1px solid #bbb
+    :padding 1px
+    :margin-right 20px
+    &:hover
+      :border-color #ddd
+      :filter alpha(opacity=85)
+      :opacity 0.85
+
+.med_summary
+  :float left
+  :width 504px
+
+.cms-legacy-styles, .post_body
+  img
+    :border 1px solid $lawgical-line-color
+    :float left
+    :margin .4em 22px 12px 0
+    :max-width 220px
+    :padding 5px
+    &.remove_img_border
+      :border none
+      :padding 0
+    &.remove_img_styles
+      :border none
+      :float none
+      :margin none
+      :padding none
+      :max-width 660px
+  .box_gray
+    :margin-top 55px
+
+.cms_cmnty_portrait
+  :float left
+  :background #fff
+  :border 1px solid #ccc
+  :padding 4px
+  :margin 0 15px 10px 0
+
+
+
+//////////////////////////
+//  cms post & page styles
+//////////////////////////
+
+.cms-content
+  img
+    +model-border-box
+    :max-width 100%
+    :height auto
+
+  blockquote
+    +model-border-box
+    :clear both
+    :position relative
+    +border-radius-small
+    :padding 15px 15px 15px 50px
+    :background $lawgical-box-color
+    &:before
+      :display block
+      :position absolute
+      :left 10px
+      :top 3px
+      :content '\201C'
+      :font bold 60px Arial, Helvetica, sans-serif
+      :color $lawgical-line-color
+    small
+      :color #777
+      &:before
+        :content '\2014\ '
+    &.cms-alignleft, &.cms-alignright
+      :width 39%
+
+.cms-alignleft
+  :float left
+  :margin 9px 15px 9px 0
+.cms-alignright
+  :float right
+  :margin 9px 0 9px 15px
+.cms-aligncenter
+  :display block
+  :margin 9px auto
+
+.cms-imgborder, figure
+  :border 1px solid $lawgical-line-color
+  :padding 4px
+  +border-radius-small
+  :background #fff
+
+.cms-cols
+  :clear both
+  :overflow hidden
+  //:padding-top 1px
+.cms-col-two, .cms-col-three, .cms-col-four
+  +model-border-box
+  :float left
+  :margin 10px 0
+.cms-col-two
+  :padding-right 15px
+  :width 50%
+  &:nth-of-type(2n+1)
+    :clear left
+  &:nth-of-type(2n)
+    :padding 0 0 0 15px
+.cms-col-three
+  :padding-right 14px
+  :width 33%
+  &:nth-of-type(3n+2)
+    :padding 0 7px
+  &:nth-of-type(3n)
+    :padding 0 0 0 14px
+  &:nth-of-type(3n+1)
+    :clear left
+.cms-col-four
+  :padding-right 14px
+  :width 25%
+  &:nth-of-type(4n+2), &:nth-of-type(4n+3)
+    :padding 0 7px
+  &:nth-of-type(4n)
+    :padding 0 0 0 14px
+  &:nth-of-type(4n+1)
+    :clear left
+
+.cms-col-two-flow
+  +columns-flow(2, 30px)
+.cms-col-three-flow
+  +columns-flow(3, 30px)
+
+.cms-box
+  +model-border-box
+  :border 1px solid $lawgical-line-color
+  +border-radius-small
+  :padding 15px
+  :background $lawgical-box-color
+  +text-shadow-white
+  & :last-child
+    :margin-bottom 0
+    :padding-bottom 0
+.cms-box.cms-alignleft, .cms-box.cms-alignright
+  :width 39%

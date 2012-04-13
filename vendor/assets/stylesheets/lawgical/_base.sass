@@ -1,0 +1,74 @@
+// Here is where you can define your constants for your application and to configure the blueprint framework.
+// Feel free to delete these if you want keep the defaults:
+
+$blueprint-grid-columns   : 24
+$blueprint-container-size : 950px
+$blueprint-grid-margin    : 10px
+
+// Use this to calculate the width based on the total width.
+// Or you can set $blueprint-grid-width to a fixed value and unset $blueprint-container-size -- it will be calculated for you.
+$blueprint-grid-width: ($blueprint-container-size + $blueprint-grid-margin) / $blueprint-grid-columns - $blueprint-grid-margin
+
+
+
+//////////////////////////
+//  universal styles
+//////////////////////////
+
+@font-face
+  :font-family 'MuseoSans500'
+  :src font-url('MuseoSans_500-webfont.eot')
+  :src font-url('MuseoSans_500-webfont.eot?iefix') format('eot'), font-url('MuseoSans_500-webfont.woff') format('woff'), font-url('MuseoSans_500-webfont.ttf') format('truetype'), font-url('MuseoSans_500-webfont.svg#webfontfK8yNqEC') format('svg')
+  :font-weight normal
+  :font-style normal
+
+$lawgical-primary-accent-type: 'MuseoSans500', Arial, "Helvetica Neue", Helvetica, sans-serif
+$lawgical-body-type: Verdana, Geneva, sans-serif
+
+$lawgical-body-color: #333
+$lawgical-box-color: #e2e2e2
+$lawgical-box-gradient-end: #dfdfdf
+$lawgical-line-color: #bbb
+
+$red-light: #f07070
+$red-dark: #af3333
+$red-inner-shdw: #ffa8a8
+$red-border: #8a1b1b
+$red-text-shdw: #8f1818
+
+
+
+//////////////////////////
+//  mixins
+//////////////////////////
+
+@mixin border-radius-small
+  :-webkit-box-radius 3px
+  :-moz-border-radius 3px
+  :border-radius 3px
+
+@mixin inset-shadow-top-white
+  :-webkit-box-shadow inset 0 1px 0 #fff
+  :-moz-box-shadow inset 0 1px 0 #fff
+  :box-shadow inset 0 1px 0 #fff
+
+@mixin text-shadow-white
+  :text-shadow 0 1px 0px #fff
+
+@mixin model-border-box
+  :-moz-box-sizing border-box
+  :-webkit-box-sizing border-box
+  :box-sizing border-box
+
+@mixin columns-flow($count, $gap)
+  :-moz-column-count $count
+  :-webkit-column-count $count
+  :column-count $count
+  :-moz-column-gap $gap
+  :-webkit-column-gap $gap
+  :column-gap $gap
+
+@mixin drop-shadow($pos-x, $pos-y, $size, $spread, $color)
+  :-moz-box-shadow $pos-x $pos-y $size $spread $color
+  :-webkit-box-shadow $pos-x $pos-y $size $spread $color
+  :box-shadow $pos-x $pos-y $size $spread $color

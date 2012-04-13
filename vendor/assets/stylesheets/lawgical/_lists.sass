@@ -1,0 +1,153 @@
+ul, ol
+  :line-height 150%
+  :padding 0 0 1.3em 15px
+
+ol
+  :padding-left 2.4em
+
+li
+  :padding-bottom .6em
+
+ul.remove_bullets
+  :list-style none
+  :padding-left 0
+  .icon_18
+    :margin-top -1px
+
+ul.breadcrumb
+  :list-style none
+  :padding 0
+  :color #999
+  a, a:visited
+    :color #999
+    :margin-right 5px
+  li
+    :float left
+    :margin-right 6px
+    &:after
+      :content "\00bb "
+    &.last_breadcrumb
+      a, a:visited
+        :text-decoration none
+        :cursor default
+        &:hover
+          :color #999
+      &:after
+        :content none
+
+ul.list_three_cols
+  :float left
+  :margin-right 20px
+  :width 188px
+
+ul.state_list
+  :list-style none
+  :float left
+  :line-height 100%
+  :margin-right 60px
+  :padding 0
+  :white-space nowrap
+  li
+    :padding-bottom .7em
+
+.right_col
+  .box_gray
+    ul.state_list
+      :margin-right 25px
+
+ul.icon_list
+  li
+    :padding-bottom .9em
+    :clear both
+
+ul.navigation
+  :list-style none
+  :line-height 100%
+  :padding 0
+  li
+    :padding 0
+    a
+      :border-bottom 1px solid #ccc
+      :display block
+      :padding .6em 0 .7em .3em
+      :text-decoration none
+      &:before
+        :content "\00bb\00a0"
+
+ul.letter_list
+  +clearfix
+  :list-style none
+  :line-height 100%
+  :padding 0
+  li
+    :color #999
+    :border-right 1px solid #d5d5d5
+    :float left
+    :padding .2em .8em
+    a, a:visited
+      :font-weight bold
+
+ul.social
+  :list-style none
+  :line-height 0
+  :padding-left 0
+  li
+    :padding-bottom .8em
+  a
+    :display block
+    :padding 9px 0 0 26px
+    :height 10px
+
+#social_facebook a
+  :background image-url('icn_social_facebook.png') no-repeat
+
+#social_twitter a
+  :background image-url('icn_social_twitter.png') no-repeat
+
+#social_linked_in a
+  :background image-url('icn_social_linked_in.png') no-repeat
+
+#social_yahoo a
+  :background image-url('icn_social_yahoo.png') no-repeat
+
+#social_my_space a
+  :background image-url('icn_social_my_space.png') no-repeat
+
+ul.tabs
+  :border-bottom 1px solid #ccc
+  :list-style none
+  :line-height normal
+  :margin-bottom 35px
+  :padding 0 7px
+  :overflow hidden
+  li
+    :float left
+    :padding-bottom 1px
+    a, a:visited
+      :display inline-block
+      :background #efefef
+      :margin-right 8px
+      :border 1px solid #ccc
+      :border-bottom none
+      :padding 5px 8px 6px
+      :text-decoration none
+      &:hover, &.current
+        :background #fff
+      &.current
+        :border-color #ddd
+        :color #999
+        :cursor default
+
+dt
+  :float left
+  :margin 0 15px 6px 0
+  :text-align right
+  :line-height 140%
+  :white-space nowrap
+  :width 51px
+
+dd
+  :float left
+  :margin-bottom 6px
+  :line-height 140%
+  :width 187px
