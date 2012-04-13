@@ -1,0 +1,60 @@
+.main_col
+  :float left
+  :margin-right 20px
+  :width 670px
+
+.middle_col
+  :float left
+  :margin-right 20px
+  :width 480px
+
+.left_col
+  :float left
+  :margin-right 20px
+  :width 170px
+
+// merge right_col and sidebar, then use class to remove margin when needed. markup refactor needed.
+.right_col
+  :float left
+  :width 260px
+
+.sidebar
+  float: left
+  margin-right: 20px
+  width: 260px
+
+.two_cols
+  :float left
+  :margin-right 30px
+  :width 460px
+  &:nth-of-type(even)
+    :margin-right 0
+
+.two_cols_fluid
+  :float left
+  :width 48%
+  &:nth-of-type(odd)
+    :margin-right 4%
+
+.three_cols
+  :float left
+  :width 296px
+  :margin-right 31px
+
+.four_col
+  :float left
+  // had to use faux column image to achieve equal heights
+  // added 1px to padding
+  // leaving the border comment for reference. jc
+  //:border-right 1px dashed #c4c4c4
+  :margin-right 19px
+  :padding-right 19px
+  :width 209px
+
+.five_cols
+  :float left
+  :width 170px
+  :margin-right 25px
+
+.two_cols_css3
+  +columns-flow(2, 20px)

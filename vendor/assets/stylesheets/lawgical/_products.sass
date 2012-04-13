@@ -1,0 +1,187 @@
+//////////////////////////
+//  products
+//////////////////////////
+
+#product_pages
+  :font 13px $lawgical-primary-accent-type
+
+  .btn_large
+    :padding 0 15px
+    :height 33px
+    :font-size 15px
+    :font-weight normal
+    :line-height 33px
+
+  nav.buttons
+    :float left
+    :margin-top 12px
+    a
+      :margin 0 10px 0 0
+
+img.tl_corner
+  :position absolute
+  :top -2px
+  :left -1px
+  :border-top-left-radius 4px
+
+.product_table
+  :position relative
+  :margin-bottom 30px
+  :border 1px solid $lawgical-line-color
+  +border-radius-small
+  h2 a, h2 a:visited
+    :text-decoration none
+
+.product
+  :position relative
+  :float left
+  :width 25%
+
+.product_list
+  :border-right 1px solid #ddd
+  :padding 20px 0 90px 0
+  ul
+    :min-width 10px
+
+  li
+    :padding 0
+    :line-height 210%
+    :background image-url('bg_product_list.gif') center bottom no-repeat
+    &:last-of-type
+      :background none
+
+.product_btn
+  :position absolute
+  :left 0
+  :bottom 0
+  +model-border-box
+  :border-right 1px solid #fff
+  :padding 20px
+  :width 100%
+  :background $lawgical-box-color
+
+.featured_prod
+  :float none
+  :position absolute
+  :right -1px
+  :top -15px
+  :bottom -10px
+  :border 2px solid $special-dark
+  +border-radius-small
+  :background #fff
+  +drop-shadow(0, 0, 10px, 0, #{rgba(0,0,0,.3)})
+  img.tl_corner
+    :top -3px
+    :left -2px
+  &:hover
+    :color $special-dark
+  .product_list, .product_btn
+    :border none
+  .product_btn
+    :padding-bottom 28px
+
+.featured_color
+  h1, h2
+    :color $special-dark
+
+.info_grid
+  .cms-cols
+    +model-border-box
+    :clear none
+    :overflow hidden
+    :border-left 1px solid $lawgical-line-color
+    :padding-left 30px
+    :width 704px
+    .cms-col-two
+      :position relative
+      :padding-left 60px
+      img
+        :position absolute
+        :left 8px
+        :top 4px
+  .info_intro
+    :float left
+    :margin 10px 30px 0 0
+    :width 215px
+
+.testimonials
+  :overflow hidden
+  .testimonial
+    :float left
+    :border-right 1px solid $lawgical-line-color
+    :padding-right 30px
+    :width 444px
+    &:nth-of-type(2)
+      :border none
+      :padding 0 0 0 30px
+    & > div
+      :float left
+      :width 137px
+      :font-size 11px
+  img
+    :margin-bottom 10px
+    :border 1px solid $lawgical-line-color
+    +border-radius-small
+    :padding 6px
+    :-moz-box-shadow 3px 3px 8px 0 rgba(0,0,0,.2)
+    :-webkit-box-shadow 3px 3px 8px 0 rgba(0,0,0,.2)
+    :box-shadow 3px 3px 8px 0 rgba(0,0,0,.2)
+  blockquote
+    :position relative
+    :float right
+    :width 240px
+    :font-size 14px
+    &:before
+      :position absolute
+      :right 100%
+      :top 5px
+      :margin-right 12px
+      :content image-url('icn_23_openquotes.png')
+
+.servemanager
+  *
+    :display inline-block
+  .large_heading, p
+    :margin 0 30px 0 0
+
+.prod_sidebar
+  :position absolute
+  :top 50px
+  :left 0
+  :width 206px
+  a.sidebar_tab
+    :position relative
+    :display block
+    :border-right 1px solid $lawgical-line-color
+    :border-bottom 1px solid $lawgical-line-color
+    :padding 10px 0 10px 45px
+    :font-size 14px
+    :color #555
+    :text-decoration none
+    &:nth-of-type(1)
+      :border-top 1px solid $lawgical-line-color
+    &:visited
+      :color #555
+    &:hover
+      :background #d5d5d5
+    &.current
+      :background #fff
+      :border-right-color #fff
+      :color #999
+      :cursor default
+    img
+      :position absolute
+      :top -1px
+      :left 0
+      :width auto
+      :height 38px
+
+.prod_details
+  +model-border-box
+  :float right
+  :border 1px solid $lawgical-line-color
+  :padding 25px 25px 30px
+  :width 734px
+  :background #fff
+  hr
+    :margin-bottom 2.2em
