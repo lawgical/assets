@@ -1,5 +1,10 @@
 /[if lt IE 9]
   -# Adds support for html5 elements in old browsers
   <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-  -# Adds support for CSS3 selectors in IE7-8. Has to load after the jQuery library.
-  = javascript_include_tag "lawgical/ie"
+
+<!--[if (gte IE 6)&(lte IE 8)]>
+-# Adds support for CSS3 selectors in IE7-8. Has to load after the jQuery library.
+<script src="/ie/selectivizr.js"></script>
+<script src="/ie/jquery-extra-selectors.js"></script>
+= javascript_include_tag "lawgical/ie"
+<![endif]-->
